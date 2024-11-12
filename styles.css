@@ -1,38 +1,37 @@
 body {
-    width: 100vw;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-
-    background-color: #eeeeee;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  background-color: #eeeeee;
 }
 
 form {
-    background-color: #c0c0c0;
-    height: 60vh;
-    width: 40vw;
-    border-radius: 50px;
+  background-color: #c0c0c0;
+  height: 60vh;
+  width: 40vw;
+  border-radius: 50px;
 }
 
 #left,
 #right {
-    border-radius: 100%;
-    background-color: #c0c0c0;
-    border: none;
+  border-radius: 100%;
+  background-color: #c0c0c0;
+  border: none;
 
-    display: grid;
-    place-content: center; 
+  display: grid;
+  place-content: center;
 }
 
 #left:active,
 #right:active {
-    background-color: #aeaeae;
+  background-color: #aeaeae;
 }
 
 img {
-    width: 40px;
-    height: 50px;
+  width: 40px;
+  height: 50px;
 }
+
