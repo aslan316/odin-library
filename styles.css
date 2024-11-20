@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -8,16 +16,70 @@ body {
   background-color: #eeeeee;
 }
 
-form {
+#main {
   background-color: #c0c0c0;
-  height: 60vh;
+  height: max(40vh, min-content);
   width: 40vw;
   border-radius: 50px;
+  padding: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1,
+label {
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+}
+
+#add-book {
+  font-size: 1.4em;
+  padding: 6px;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#book-display {
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+}
+
+p,
+input {
+  margin-left: 2em;
+  padding: 1em;
+  border-radius: 20px;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
 }
 
 #left,
 #right {
-  border-radius: 100%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   background-color: #c0c0c0;
   border: none;
 
@@ -25,8 +87,8 @@ form {
   place-content: center;
 }
 
-#left:active,
-#right:active {
+#left:hover,
+#right:hover {
   background-color: #aeaeae;
 }
 
@@ -34,4 +96,3 @@ img {
   width: 40px;
   height: 50px;
 }
-

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bookcase</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -16,9 +16,28 @@
       />
     </button>
     <div id="main">
-      <form></form>
-      <div id="book-display"></div>
-      <button id="add-book"></button>
+      <form class="hidden">
+        <label for="title">Title: </label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Harry Potter..."
+        />
+        <label for="author">Author: </label>
+        <input type="text" name="author" id="author" placeholder="J.K..." />
+        <label for="number_pages">Number of Pages: </label>
+        <input type="number" name="number-pages" id="number-pages" />
+        <button id="add-book">Add</button>
+      </form>
+      <div id="book-display" class="visible">
+        <h1>Title:</h1>
+        <p id="title-text"></p>
+        <h1>Author:</h1>
+        <p id="author-text"></p>
+        <h1>Number of Pages:</h1>
+        <p id="pages-text"></p>
+      </div>
     </div>
     <button id="right">
       <img
@@ -30,4 +49,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
