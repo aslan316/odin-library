@@ -8,14 +8,16 @@ const myLibrary = [];
 let currentIndex = 0;
 viewOrNew();
 
-function Book(author, title, numberPages) {
-  this.author = author;
-  this.title = title;
-  this.numberPages = numberPages;
-}
+class Book {
+  constructor(author, title, numberPages) {
+    this.author = author;
+    this.title = title;
+    this.numberPages = numberPages;
+  }
 
-function addBookToLibrary(author, title, numberPages) {
-  myLibrary.push(new Book(author, title, numberPages));
+  static addBookToLibrary(author, title, numberPages) {
+    myLibrary.push(new Book(author, title, numberPages));
+  }
 }
 
 left.addEventListener("click", () => {
@@ -37,7 +39,7 @@ addButton.addEventListener("click", (e) => {
   const authorInput = document.querySelector("#author");
   const pagesInput = document.querySelector("#number-pages");
 
-  addBookToLibrary(authorInput.value, titleInput.value, pagesInput.value);
+  Book.addBookToLibrary(authorInput.value, titleInput.value, pagesInput.value);
   viewOrNew();
 
   authorInput.value = "";
